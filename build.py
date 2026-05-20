@@ -140,7 +140,7 @@ CONTEXT_PANELS = [
     <p class="prose">WorldFirst is a cross-border payments specialist owned by Ant Group. We help small and medium business owners move money between countries — paying suppliers, receiving marketplace payouts, holding multi-currency accounts. We are not a bank. We are the rails between banks that don\'t talk to each other smoothly.</p>
     <p class="prose">For this batch, the product truth is: <strong>direct CNY rails to Chinese suppliers, same-day, near mid-market exchange rates</strong>. The scripts each surface a different way that truth shows up in an operator\'s week.</p>'''),
     panel(2, 'Who we\'re talking to', '''
-    <p class="prose">SEA-based SME operators sourcing from China. Priority: Thailand and Malaysia. Secondary: Vietnam, Philippines, Indonesia, Singapore.</p>
+    <p class="prose">SEA-based SME operators sourcing from China. Priority: Singapore and Malaysia. Secondary: Vietnam, Philippines, Indonesia, Thailand.</p>
     <p class="prose">Small teams. They source on 1688 or Alibaba. They pay suppliers in wires, PayPal, or credit cards depending on the supplier. They know FX margin exists but cannot quantify it. They\'ve had a wire delayed. They\'ve been told no to Visa by a supplier and didn\'t understand why. They are not finance people. Speak to them like a friend who imports, not a bank.</p>
     <p class="prose">Reading level is around 7th-8th grade English. No acronyms without a quick spell-out the first time.</p>'''),
     panel(3, 'Voice + house rules', '''
