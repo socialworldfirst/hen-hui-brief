@@ -18,7 +18,8 @@ by_key = {(e['slide_id'], e['variant_id']): e for e in fz['finalized']}
 NOTES = {
     ('P1-A9-1', 'PH2'): {
         'shape': 'Story',
-        'why': 'Operators feel wire delays as money trouble. They\'re not. They\'re time trouble. The container slips before the money does. We want a viewer who\'s currently watching a "Sent" status to suddenly understand WHY their supplier is silent — and what the real cost is.',
+        'why_this_one': 'Every operator who has wired money to China has felt this exact silence. It is the most universally relatable pain in the set. Picking this one as the lead opens the door — it earns the listen before we ask for anything. Of all 10 voice variants for this idea, the PH2 version was the only one that opens on a paradox ("lose a container without losing the money"), which is a stronger hook for a quiet-tension story than a head-on statement.',
+        'what_this_is_for': 'Trust-building in the small-batch set. This script does not sell WorldFirst. It validates that we understand the operator\'s actual problem. The product mention at the end is a relief, not a pitch. Audience walks away thinking "they get it" — that is the only job this script needs to do.',
         'truth': 'A delayed wire is not a money problem. It is a container problem, a season problem, a competitor-on-the-shelf problem. The bank app says "Sent" while the factory floor sits idle.',
         'carrying': [
             'The paradox: the app says yes, the supplier says nothing',
@@ -47,7 +48,8 @@ NOTES = {
     },
     ('P1-A14-1', 'PH2'): {
         'shape': 'Math',
-        'why': 'Operators know "FX is shady" but can\'t put a number on it. We want them to leave this video with a specific dollar figure burned into their head — and a way to imagine that dollar figure as something tangible (an employee, a container, a product line). Once the math becomes a person, it can\'t be un-seen.',
+        'why_this_one': 'Operators know "FX is shady" but cannot put a number on it. Most scripts trying to solve this fail because they hand-wave with percentages. This one nails three specific received amounts on identical wires and then compounds the gap into something an operator can touch ("an employee, a container, the next product line"). The compounding turn is the moment that hits — because most SEA operators run lean teams and "an employee" is a real ask. We picked PH2 over the four other Hormozi variants because it leads with the spread (numbers in the first sentence) rather than building up to it. Math-led hooks deserve math-led opens.',
+        'what_this_is_for': 'The proof piece. After the story script earns trust, this one delivers a number the audience can remember and screenshot. The strategic job: make the hidden margin visible enough that the audience starts checking their own. Every viewer who pulls out a calculator after watching is a win.',
         'truth': 'Three operators send the same 50K to the same supplier on the same day. They get three different amounts received. The difference isn\'t random and it isn\'t small — it\'s a hire over three years.',
         'carrying': [
             'The setup that feels too tidy to be true (same supplier, same day, same wire)',
@@ -77,7 +79,8 @@ NOTES = {
     },
     ('P2-A8-1', 'PH2'): {
         'shape': 'Demo',
-        'why': 'This is the script that gives the viewer a hands-on win. They can pause, do the math on their own last wire, and see the hidden fee themselves. Self-discovery beats us telling them every time. The best outcome: they screenshot their own bank receipt and DM it to their accountant.',
+        'why_this_one': 'The audience hears "hidden fees" all the time and tunes out. This script breaks the tune-out by making it a do-it-now exercise. They check their own bank receipt and find their own number. Self-discovery beats us telling them every single time. PH2 was the only Hormozi variant that framed it as a 30-second challenge with explicit step counts — that structure makes the script unusually easy to follow on a phone, even with sound off.',
+        'what_this_is_for': 'The conversion piece. After Story (trust) and Math (proof), this one makes the cost personal. Once the audience has seen their own hidden fee number, the WorldFirst positioning at the end lands without effort — it answers a question they\'re already asking themselves. Strategic outcome: a viewer who screenshots their own bank receipt and shows it to their accountant or co-founder. That share is the product of this script.',
         'truth': 'A 30-second exercise anyone with a phone can do, that exposes a fee the bank has every reason not to show on a line item.',
         'carrying': [
             'The challenge framing ("30 seconds, watch")',
@@ -131,8 +134,13 @@ def script_panel(num, e, notes):
     </div>
 
     <div class="block">
-      <div class="block-label">Why we\'re making this</div>
-      <p class="prose">{esc(notes['why'])}</p>
+      <div class="block-label">Why we picked this story</div>
+      <p class="prose">{esc(notes['why_this_one'])}</p>
+    </div>
+
+    <div class="block">
+      <div class="block-label">What this script is for</div>
+      <p class="prose">{esc(notes['what_this_is_for'])}</p>
     </div>
 
     <div class="block">
@@ -168,7 +176,7 @@ def script_panel(num, e, notes):
     </div>
 
     <details class="vo-details">
-      <summary><span class="block-label">Reference VO · starting point, not a verbatim read</span></summary>
+      <summary><span class="block-label">Story suggestion · a direction, rewrite it in your tone</span></summary>
       <p class="vo">{esc(e['final_vo'])}</p>
     </details>'''
     return panel(num, title, body)
@@ -248,6 +256,7 @@ html, body { margin: 0; padding: 0; background: var(--bg); color: var(--ink); fo
 .main { padding: 60px 56px 120px; }
 .hero { padding-bottom: 32px; border-bottom: 1px solid var(--line); margin-bottom: 48px; }
 .kicker { font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-mute); margin-bottom: 14px; }
+.for-line { font-family: var(--serif); font-size: 28px; font-weight: 500; letter-spacing: -0.01em; color: var(--pick); margin: 0 0 6px; line-height: 1.1; }
 h1 { font-size: 36px; line-height: 1.15; letter-spacing: -0.022em; font-weight: 600; margin: 0 0 12px; }
 .lede { font-size: 16px; color: var(--ink-soft); line-height: 1.6; max-width: 760px; }
 .lede + .lede { margin-top: 14px; }
@@ -316,17 +325,18 @@ HTML_PAGE = f'''<!DOCTYPE html>
 <body>
 <div class="layout">
   <nav class="sidebar">
-    <div class="sb-kicker">Sparkloop · brief</div>
+    <div class="sb-kicker">Creator brief · for Hen Hui</div>
     <div class="sb-title">Three to film</div>
     <div class="sb-meta">SEA brand channel · batch 1</div>
     <div class="sb-nav">{NAV_ITEMS}</div>
   </nav>
   <main class="main">
     <div class="hero">
-      <div class="kicker">WorldFirst · SEA brand channel · short-form</div>
+      <div class="kicker">WorldFirst · SEA brand channel · short-form · creator brief</div>
+      <div class="for-line">For Hen Hui</div>
       <h1>Three to film</h1>
-      <p class="lede">Three picks that earn a slot in the next drop. Each one carries a different shape: a quiet story about lost time, a math piece that turns hidden margin into a hire, and a 30-second demo a viewer can do alongside.</p>
-      <p class="lede">This brief gives you the truth underneath each script, the audience we\'re talking to, and the bits we\'d rather not change. The VO copy sits at the bottom of each one as a starting point — not a verbatim read. Bring your treatment.</p>
+      <p class="lede">Three picks that earn a slot in the next drop. Each one carries a different shape on purpose: a quiet story about lost time, a math piece that turns hidden margin into a hire, and a 30-second demo a viewer can do alongside.</p>
+      <p class="lede">Each script comes with the why (why this story over the other nine for the same idea), what it\'s for (the role it plays in the small-batch set), the truth underneath it, and the bits we\'d rather not change. The story suggestion sits at the bottom of each one as a direction — rewrite it in your tone, your treatment, your rhythm.</p>
     </div>
     {''.join(CONTEXT_PANELS)}
     {SCRIPT_PANELS}
