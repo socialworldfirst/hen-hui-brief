@@ -91,6 +91,11 @@ def script_panel(num, e, notes):
     </div>
 
     <div class="block">
+      <div class="block-label">Story suggestion · rewrite it in your tone</div>
+      <p class="vo">{esc(e['final_vo'])}</p>
+    </div>
+
+    <div class="block">
       <div class="block-label">Why this one</div>
       <p class="prose">{esc(notes['why_this_one'])}</p>
     </div>
@@ -127,11 +132,6 @@ def script_panel(num, e, notes):
     <div class="block">
       <div class="block-label">Locked · please keep</div>
       <p class="prose">{esc(notes['locked'])}</p>
-    </div>
-
-    <div class="block">
-      <div class="block-label">Story suggestion · rewrite it in your tone</div>
-      <p class="vo">{esc(e['final_vo'])}</p>
     </div>'''
     return panel(num, title, body)
 
