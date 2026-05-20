@@ -36,96 +36,36 @@ by_key = {(e['slide_id'], e['variant_id']): e for e in fz['finalized']}
 NOTES = {
     ('P1-A9-1', 'PH2'): {
         'shape': 'Story',
-        'why_this_one': 'Every operator who has wired money to China has felt this exact silence. It is the most universally relatable pain in the set. Picking this one as the lead opens the door — it earns the listen before we ask for anything. Of all 10 voice variants for this idea, the PH2 version was the only one that opens on a paradox ("lose a container without losing the money"), which is a stronger hook for a quiet-tension story than a head-on statement.',
-        'what_this_is_for': 'Trust-building in the small-batch set. This script does not sell WorldFirst. It validates that we understand the operator\'s actual problem. The product mention at the end is a relief, not a pitch. Audience walks away thinking "they get it" — that is the only job this script needs to do.',
-        'truth': 'A delayed wire is not a money problem. It is a container problem, a season problem, a competitor-on-the-shelf problem. The bank app says "Sent" while the factory floor sits idle.',
-        'carrying': [
-            'The paradox: the app says yes, the supplier says nothing',
-            'The chain that nobody told you about — three intermediary banks, conversion windows, AML holds, a Friday holiday in Shenzhen',
-            'The escalation: lost the day → lost the week → lost the order',
-            'The stakes that hit different in Q4 or on a launch SKU',
-            'The reframe: "the wire isn\'t lost. The visibility is."',
-        ],
-        'anchor_stats': 'Three intermediaries · two days of conversion windows · one surprise AML hold · a Friday public holiday · five-day silence',
-        'feel': 'Quiet tension. The energy of refreshing a phone over and over and getting nothing back. Operator-to-operator. Real. Not preachy.',
-        'open': [
-            'Could be a single-take talking head with the anxiety on the face',
-            'Could be a split-screen of operator-side (calm app) vs supplier-side (empty factory, silent WhatsApp)',
-            'Could open on the calendar slipping rather than the wire — work backwards',
-            'Could be set in a SEA office with familiar visual cues (Bangkok / KL coworking, Friday afternoon light)',
-            'The "Friday holiday in Shenzhen" line is gold if she wants to lean into one specific story moment',
-        ],
-        'locked': [
-            'Vertical 9:16',
-            '~60 seconds',
-            'CTA at end: "Search WorldFirst"',
-            'We voice (not "I")',
-            'No em-dashes in any captions or supers',
-            'WorldFirst proof point: direct CNY rails, same-day, with a tracking reference the supplier can match',
-        ],
+        'why_this_one': 'Anyone who\'s wired money to China has felt this silence. It\'s the most universal pain in the batch, and it lets us open the set without selling anything. Earn the listen first.',
+        'what_this_is_for': 'The trust piece. It doesn\'t sell WorldFirst, it shows we understand the actual problem. If a viewer walks away thinking "they get it," this script did its job.',
+        'truth': 'A delayed wire is not a money problem. It\'s a container problem, a season problem, a competitor-on-the-shelf problem. The bank app says "Sent" while the factory floor sits idle.',
+        'carrying': 'The paradox lands first: the app shows Sent, the supplier shows nothing. Then the chain nobody told them about, the intermediary banks, the conversion windows, the AML hold above some threshold, a Friday holiday in Shenzhen. The escalation matters: lost the day, then the week, then the order. Land it on the reframe: the wire isn\'t lost, the visibility is.',
+        'anchor_stats': 'three intermediaries · two conversion days · one surprise AML hold · Friday holiday in Shenzhen · five-day silence',
+        'feel': 'Quiet tension. Refreshing a phone, getting nothing. Operator-to-operator, not preachy.',
+        'open': 'Single talking head if the delivery carries it. Split-screen of operator-side calm and supplier-side empty floor if she wants visual contrast. Could work the calendar slipping into the cold open. The Friday-in-Shenzhen beat is the strongest specific if she wants one moment to lean into.',
+        'locked': 'Vertical 9:16, ~60 seconds, we voice, no em-dashes, CTA "Search WorldFirst." Land the proof point: direct CNY rails, same-day, with a tracking reference the supplier can match.',
     },
     ('P1-A14-1', 'PH2'): {
         'shape': 'Math',
-        'why_this_one': 'Operators know "FX is shady" but cannot put a number on it. Most scripts trying to solve this fail because they hand-wave with percentages. This one nails three specific received amounts on identical wires and then compounds the gap into something an operator can touch ("an employee, a container, the next product line"). The compounding turn is the moment that hits — because most SEA operators run lean teams and "an employee" is a real ask. We picked PH2 over the four other Hormozi variants because it leads with the spread (numbers in the first sentence) rather than building up to it. Math-led hooks deserve math-led opens.',
-        'what_this_is_for': 'The proof piece. After the story script earns trust, this one delivers a number the audience can remember and screenshot. The strategic job: make the hidden margin visible enough that the audience starts checking their own. Every viewer who pulls out a calculator after watching is a win.',
-        'truth': 'Three operators send the same 50K to the same supplier on the same day. They get three different amounts received. The difference isn\'t random and it isn\'t small — it\'s a hire over three years.',
-        'carrying': [
-            'The setup that feels too tidy to be true (same supplier, same day, same wire)',
-            'The reveal (three different received amounts on identical wires)',
-            'The compounding (12 wires a year, 600K of sourcing volume)',
-            'The translation (7,200 dollar gap a year → 21,600 over three)',
-            'The "that\'s an employee / container / product line" moment — abstract becomes tangible',
-            'The mechanism in one line: not a fee, the rate',
-        ],
-        'anchor_stats': '49,250 / 49,700 / 49,850 · 600 dollar spread · 12 wires · 600K volume · 9,000 vs 1,800 annual loss · 7,200 gap · 21,600 over 3 years · 1-2% bank margin · 0.3% specialist margin',
-        'feel': 'Confident. Each number lands. The energy of someone showing receipts, not selling. Hormozi-adjacent without the shouting.',
-        'open': [
-            'Could be pure talking head if the delivery is strong enough to carry the math',
-            'Could be a calculator-on-screen treatment where the math is the visual',
-            'Could be three split-screen receipts that animate the spread',
-            'The "that\'s an employee / container / product line" line opens up a great cutaway sequence — find the strongest image of each and let it breathe',
-            'Worth considering: end on a comparison bar that lives on screen long enough for the viewer to screenshot it',
-        ],
-        'locked': [
-            'Vertical 9:16',
-            '~60 seconds',
-            'CTA at end: "Search WorldFirst"',
-            'We voice',
-            'No em-dashes',
-            'WorldFirst proof point: 0.3% margin on the same wires, same-day to Chinese bank accounts',
-        ],
+        'why_this_one': 'Operators know FX margin exists, they can\'t name a number. This one names three: 49,250, 49,700, 49,850. Then it compounds. By the end, the hidden margin becomes "an employee" or "a container," and that doesn\'t un-see.',
+        'what_this_is_for': 'The proof piece. After the story script earns trust, this one gives them a number to remember. Best case: someone pauses to do the math on their own volume.',
+        'truth': 'Three operators send the same 50K to the same supplier on the same day. They get three different amounts back. The difference is a hire over three years.',
+        'carrying': 'The setup is almost too tidy to be true, that\'s the hook. Then the reveal of the three received amounts. Then the compounding: 12 wires a year on 600K of volume, the gap year-on-year, the three-year total. The translation moment is the one to protect: "that\'s an employee, that\'s a container, that\'s the next product line." Close on the mechanism in one line: it\'s not a fee, it\'s the rate.',
+        'anchor_stats': '49,250 / 49,700 / 49,850 · 600 dollar spread · 12 wires · 600K volume · 7,200 annual gap · 21,600 over 3 years',
+        'feel': 'Confident, mathematical. Showing receipts, not selling. Hormozi-adjacent without the shouting.',
+        'open': 'Pure talking head if the delivery is strong. Calculator-on-screen treatment if she wants the math to be the visual. Three split receipts is the obvious move — only worth it if the design lands. The "employee / container / product line" beat opens a cutaway sequence, find the strongest image of each and let each one breathe.',
+        'locked': 'Vertical 9:16, ~60 seconds, we voice, no em-dashes, CTA "Search WorldFirst." Land the proof point: 0.3% on the same wires, same-day to Chinese bank accounts.',
     },
     ('P2-A8-1', 'PH2'): {
         'shape': 'Demo',
-        'why_this_one': 'The audience hears "hidden fees" all the time and tunes out. This script breaks the tune-out by making it a do-it-now exercise. They check their own bank receipt and find their own number. Self-discovery beats us telling them every single time. PH2 was the only Hormozi variant that framed it as a 30-second challenge with explicit step counts — that structure makes the script unusually easy to follow on a phone, even with sound off.',
-        'what_this_is_for': 'The conversion piece. After Story (trust) and Math (proof), this one makes the cost personal. Once the audience has seen their own hidden fee number, the WorldFirst positioning at the end lands without effort — it answers a question they\'re already asking themselves. Strategic outcome: a viewer who screenshots their own bank receipt and shows it to their accountant or co-founder. That share is the product of this script.',
-        'truth': 'A 30-second exercise anyone with a phone can do, that exposes a fee the bank has every reason not to show on a line item.',
-        'carrying': [
-            'The challenge framing ("30 seconds, watch")',
-            'Step 1: the wire confirmation — "applied rate" is the field that matters',
-            'Step 2: Google the mid-market rate for that currency pair',
-            'Step 3: the gap IS the margin',
-            'Step 4: multiply the gap by the wire amount — that\'s the hidden fee in dollars',
-            'The line that bites: "No line item. No receipt. Just hidden inside the rate."',
-        ],
-        'anchor_stats': '30 seconds total · 5s / 10s / a few seconds to compare / 10s to multiply · 2% gap example · 50K wire example · 1,000 dollars per wire',
-        'feel': 'Tutorial-friendly. Slightly conspiratorial — like sharing a trick a finance friend told you. Not "watch me solve a puzzle"; more "you can do this right now, here\'s how."',
-        'open': [
-            'Could be screen-recording-led with talent narrating over their own phone',
-            'Could be talent on camera with a stopwatch ticking in the corner, doing the math on a notepad',
-            'Could use a real (anonymized) wire confirmation from a SEA bank for credibility',
-            'Could end on a screenshot moment that begs to be shared — make sure the final reveal frame is screenshot-worthy',
-            'Stopwatch is optional but plays well with the "30 seconds" promise — director\'s call',
-        ],
-        'locked': [
-            'Vertical 9:16',
-            '~30 seconds (matches the promise in the hook)',
-            'CTA at end: "Search WorldFirst"',
-            'We voice',
-            'No em-dashes',
-            'No country-specific framing in the body (USD is the wire currency, destination is whatever local currency the viewer wired to)',
-            'WorldFirst proof point: near Google mid-market rate = hidden fee disappears',
-        ],
+        'why_this_one': 'Most "hidden fee" content gets tuned out. This one turns the claim into a 30-second exercise the viewer can do on their own bank receipt. Self-discovery hits harder than us telling them.',
+        'what_this_is_for': 'The conversion piece. The viewer finds their own number, then the WorldFirst positioning at the end answers a question they\'re already asking. Best case: they screenshot their own receipt and send it to their accountant.',
+        'truth': 'A 30-second exercise anyone with a phone can do, that exposes a fee the bank has every reason not to put on a line item.',
+        'carrying': 'Open on the challenge. Step one is the wire confirmation, point them at the "applied rate" field. Step two is Google for the mid-market rate. Step three is the comparison, the gap is the margin. Step four is the multiplication, the gap times the wire amount. Land the line: no line item, no receipt, just hidden inside the rate. Close on the scale: a 2 percent gap on a 50K wire is 1,000 dollars, every time.',
+        'anchor_stats': '30 seconds · 4 steps · 2% gap example · 50K wire example · 1,000 dollars hidden per wire',
+        'feel': 'Tutorial-friendly, slightly conspiratorial. Like a finance friend showing a trick.',
+        'open': 'Screen-recording with talent narrating over the phone is the obvious version. Could be talent on camera with a stopwatch in the corner, doing the math longhand. Real anonymized wire confirmation from a SEA bank would land harder than a mock. The final reveal frame should be screenshot-worthy on purpose.',
+        'locked': 'Vertical 9:16, ~30 seconds (it has to match the promise), we voice, no em-dashes, CTA "Search WorldFirst." Body stays generic — USD is the wire currency, destination is whatever local currency the viewer wired to. Land the proof point: near Google mid-market rate, hidden fee disappears.',
     },
 }
 
@@ -148,55 +88,51 @@ def script_panel(num, e, notes):
     <div class="meta-row">
       <span class="tag">{esc(notes['shape'])}</span>
       <span class="meta-id">{esc(e['slide_id'])}</span>
-      <span class="meta-len">~{esc(notes['locked'][1].replace("~","").replace(" seconds","s"))}</span>
     </div>
 
     <div class="block">
-      <div class="block-label">Why we picked this story</div>
+      <div class="block-label">Why this one</div>
       <p class="prose">{esc(notes['why_this_one'])}</p>
     </div>
 
     <div class="block">
-      <div class="block-label">What this script is for</div>
+      <div class="block-label">What it\'s for</div>
       <p class="prose">{esc(notes['what_this_is_for'])}</p>
     </div>
 
     <div class="block">
-      <div class="block-label">The truth underneath</div>
       <p class="prose strong">{esc(notes['truth'])}</p>
     </div>
 
     <div class="block">
-      <div class="block-label">What the story is carrying</div>
-      <ul class="carry">{list_html(notes['carrying'])}</ul>
+      <div class="block-label">What the story carries</div>
+      <p class="prose">{esc(notes['carrying'])}</p>
     </div>
 
-    <div class="grid2">
-      <div class="block">
-        <div class="block-label">Stats that anchor it</div>
-        <p class="prose mono">{esc(notes['anchor_stats'])}</p>
-      </div>
-      <div class="block">
-        <div class="block-label">What it should feel like</div>
-        <p class="prose">{esc(notes['feel'])}</p>
-      </div>
+    <div class="block">
+      <div class="block-label">Numbers that anchor it</div>
+      <p class="prose mono">{esc(notes['anchor_stats'])}</p>
     </div>
 
-    <div class="grid2">
-      <div class="block open">
-        <div class="block-label">Open territory · your call</div>
-        <ul class="open-list">{list_html(notes['open'])}</ul>
-      </div>
-      <div class="block locked">
-        <div class="block-label">Locked · please keep</div>
-        <ul class="locked-list">{list_html(notes['locked'])}</ul>
-      </div>
+    <div class="block">
+      <div class="block-label">Feel</div>
+      <p class="prose">{esc(notes['feel'])}</p>
     </div>
 
-    <details class="vo-details">
-      <summary><span class="block-label">Story suggestion · a direction, rewrite it in your tone</span></summary>
+    <div class="block">
+      <div class="block-label">Open territory · your call</div>
+      <p class="prose">{esc(notes['open'])}</p>
+    </div>
+
+    <div class="block">
+      <div class="block-label">Locked · please keep</div>
+      <p class="prose">{esc(notes['locked'])}</p>
+    </div>
+
+    <div class="block">
+      <div class="block-label">Story suggestion · rewrite it in your tone</div>
       <p class="vo">{esc(e['final_vo'])}</p>
-    </details>'''
+    </div>'''
     return panel(num, title, body)
 
 CONTEXT_PANELS = [
@@ -318,7 +254,7 @@ h2 { font-size: 24px; line-height: 1.25; letter-spacing: -0.012em; font-weight: 
 .vo-details summary::before { content: '▸ '; font-family: var(--mono); color: var(--ink-mute); margin-right: 4px; }
 .vo-details[open] summary::before { content: '▾ '; }
 .vo-details summary .block-label { display: inline; margin-bottom: 0; }
-.vo { font-family: var(--serif); font-size: 15px; line-height: 1.7; color: var(--ink-soft); margin: 14px 0 0; padding: 0; background: none; border: none; }
+.vo { font-family: var(--serif); font-size: 15px; line-height: 1.7; color: var(--ink); margin: 0; padding: 18px 22px; background: var(--tint); border-left: 3px solid var(--pick); border-radius: 0 6px 6px 0; }
 
 @media (max-width: 900px) {
   .layout { grid-template-columns: 1fr; }
