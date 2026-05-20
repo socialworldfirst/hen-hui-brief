@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex,nofollow">
-<title>SEA Batch 1 - Three to film</title>
+<title>Three to film - for Hen Hui</title>
 <style>
 :root {
   --ink: #0a0a0a;
@@ -93,252 +93,95 @@ h2 { font-size: 24px; line-height: 1.25; letter-spacing: -0.012em; font-weight: 
   h1 { font-size: 26px; }
   .grid2 { grid-template-columns: 1fr; gap: 18px; }
 }
+
+body.locked { overflow: hidden; }
+#gate { position: fixed; inset: 0; background: var(--bg, #fff); display: flex; align-items: center; justify-content: center; z-index: 9999; }
+#gate-card { width: min(360px, 92vw); padding: 40px 32px; border: 1px solid #d8d8d8; border-radius: 10px; background: #fff; text-align: center; }
+#gate-card h2 { font-size: 18px; font-weight: 600; margin: 0 0 22px; color: #0a0a0a; letter-spacing: -0.01em; }
+#gate-form { display: flex; flex-direction: column; gap: 10px; }
+#gate-input { padding: 12px 14px; font-size: 14px; border: 1px solid #d8d8d8; border-radius: 6px; outline: none; font-family: inherit; }
+#gate-input:focus { border-color: #0a0a0a; }
+#gate-btn { padding: 12px 14px; font-size: 13px; font-weight: 600; letter-spacing: 0.02em; background: #0a0a0a; color: #fff; border: 0; border-radius: 6px; cursor: pointer; }
+#gate-btn:hover { background: #2a2a2a; }
+#gate-err { font-size: 12px; color: #b03060; margin-top: 8px; min-height: 16px; }
+.footer { margin-top: 80px; padding-top: 24px; border-top: 1px solid #ececec; font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 11px; color: #6a6a6a; }
+.footer a { color: #6a6a6a; text-decoration: none; }
+.footer a:hover { color: #0a0a0a; text-decoration: underline; }
 </style>
 </head>
-<body>
-<div class="layout">
-  <nav class="sidebar">
-    <div class="sb-kicker">Creator brief · for Hen Hui</div>
-    <div class="sb-title">Three to film</div>
-    <div class="sb-meta">SEA brand channel · batch 1</div>
-    <div class="sb-nav"><a href="#s1" class="nav-item"><span class="nav-num">01</span><span class="nav-id">The brand</span></a><a href="#s2" class="nav-item"><span class="nav-num">02</span><span class="nav-id">Who we're talking to</span></a><a href="#s3" class="nav-item"><span class="nav-num">03</span><span class="nav-id">Voice + house rules</span></a><a href="#s4" class="nav-item"><span class="nav-num">04</span><span class="nav-id">Three shapes, on purpose</span></a><a href="#s5" class="nav-item"><span class="nav-num">05</span><span class="nav-id">My bank says sent. My supplier says nothing. Bot</span></a><a href="#s6" class="nav-item"><span class="nav-num">06</span><span class="nav-id">Three operators, same wire, three amounts</span></a><a href="#s7" class="nav-item"><span class="nav-num">07</span><span class="nav-id">Find the hidden FX margin in 30 seconds</span></a></div>
-  </nav>
-  <main class="main">
-    <div class="hero">
-      <div class="kicker">WorldFirst · SEA brand channel · short-form · creator brief</div>
-      <div class="for-line">For Hen Hui</div>
-      <h1>Three to film</h1>
-      <p class="lede">Three picks that earn a slot in the next drop. Each one carries a different shape on purpose: a quiet story about lost time, a math piece that turns hidden margin into a hire, and a 30-second demo a viewer can do alongside.</p>
-      <p class="lede">Each script comes with the why (why this story over the other nine for the same idea), what it's for (the role it plays in the small-batch set), the truth underneath it, and the bits we'd rather not change. The story suggestion sits at the bottom of each one as a direction — rewrite it in your tone, your treatment, your rhythm.</p>
-    </div>
-    
-<section id="s1" class="panel">
-  <div class="panel-num">01</div>
-  <div class="panel-body">
-    <h2>The brand</h2>
-    
-    <p class="prose">WorldFirst is a cross-border payments specialist owned by Ant Group. We help small and medium business owners move money between countries — paying suppliers, receiving marketplace payouts, holding multi-currency accounts. We are not a bank. We are the rails between banks that don't talk to each other smoothly.</p>
-    <p class="prose">For this batch, the product truth is: <strong>direct CNY rails to Chinese suppliers, same-day, near mid-market exchange rates</strong>. The scripts each surface a different way that truth shows up in an operator's week.</p>
+<body class="locked">
+<div id="gate">
+  <div id="gate-card">
+    <h2>Three to film · for Hen Hui</h2>
+    <form id="gate-form" onsubmit="return gateSubmit(event)">
+      <input id="gate-input" type="password" placeholder="password" autocomplete="off" autofocus>
+      <button id="gate-btn" type="submit">Enter</button>
+    </form>
+    <div id="gate-err"></div>
   </div>
-</section>
-<section id="s2" class="panel">
-  <div class="panel-num">02</div>
-  <div class="panel-body">
-    <h2>Who we&#x27;re talking to</h2>
-    
-    <p class="prose">SEA-based SME operators sourcing from China. Priority: Thailand and Malaysia. Secondary: Vietnam, Philippines, Indonesia, Singapore.</p>
-    <p class="prose">Small teams. They source on 1688 or Alibaba. They pay suppliers in wires, PayPal, or credit cards depending on the supplier. They know FX margin exists but cannot quantify it. They've had a wire delayed. They've been told no to Visa by a supplier and didn't understand why. They are not finance people. Speak to them like a friend who imports, not a bank.</p>
-    <p class="prose">Reading level is around 7th-8th grade English. No acronyms without a quick spell-out the first time.</p>
-  </div>
-</section>
-<section id="s3" class="panel">
-  <div class="panel-num">03</div>
-  <div class="panel-body">
-    <h2>Voice + house rules</h2>
-    
-    <ul class="prose-list">
-      <li><strong>We voice.</strong> Official WorldFirst account. Not first-person "I". Not "you guys".</li>
-      <li><strong>Direct, modern, practical.</strong> Like a friend who imports, not a bank.</li>
-      <li><strong>Value first. Viral second. Brand mentions last.</strong> Teach something real in every script. The brand earns the CTA at the end.</li>
-      <li><strong>Numbers, not adjectives.</strong> "Saves money" is weak. "1,000 dollars per wire on a 50K transfer" is strong.</li>
-      <li><strong>No em-dashes</strong> (the long horizontal line). Use commas, colons, periods, line breaks.</li>
-      <li><strong>One CTA, end of video:</strong> "Search WorldFirst."</li>
-    </ul>
-  </div>
-</section>
-<section id="s4" class="panel">
-  <div class="panel-num">04</div>
-  <div class="panel-body">
-    <h2>Three shapes, on purpose</h2>
-    
-    <p class="prose">The three picks are deliberately different shapes so they don't feel like the same video filmed three times. They should land as a small set with internal variety:</p>
-    <ul class="prose-list">
-      <li><strong>Story</strong> — urgency and time cost. The cost isn't the money.</li>
-      <li><strong>Math</strong> — compounding numbers. The hidden margin becomes a person.</li>
-      <li><strong>Demo</strong> — try it in 30 seconds. The viewer can do the trick themselves.</li>
-    </ul>
-    <p class="prose">Treat each one as its own film. Different energy, different visual treatment, different rhythm. If they all feel the same on a feed, we've under-shot.</p>
-  </div>
-</section>
-    
-<section id="s5" class="panel">
-  <div class="panel-num">05</div>
-  <div class="panel-body">
-    <h2>My bank says sent. My supplier says nothing. Both right.</h2>
-    
-    <div class="meta-row">
-      <span class="tag">Story</span>
-      <span class="meta-id">P1-A9-1</span>
-      <span class="meta-len">~60s</span>
-    </div>
-
-    <div class="block">
-      <div class="block-label">Why we picked this story</div>
-      <p class="prose">Every operator who has wired money to China has felt this exact silence. It is the most universally relatable pain in the set. Picking this one as the lead opens the door — it earns the listen before we ask for anything. Of all 10 voice variants for this idea, the PH2 version was the only one that opens on a paradox (&quot;lose a container without losing the money&quot;), which is a stronger hook for a quiet-tension story than a head-on statement.</p>
-    </div>
-
-    <div class="block">
-      <div class="block-label">What this script is for</div>
-      <p class="prose">Trust-building in the small-batch set. This script does not sell WorldFirst. It validates that we understand the operator&#x27;s actual problem. The product mention at the end is a relief, not a pitch. Audience walks away thinking &quot;they get it&quot; — that is the only job this script needs to do.</p>
-    </div>
-
-    <div class="block">
-      <div class="block-label">The truth underneath</div>
-      <p class="prose strong">A delayed wire is not a money problem. It is a container problem, a season problem, a competitor-on-the-shelf problem. The bank app says &quot;Sent&quot; while the factory floor sits idle.</p>
-    </div>
-
-    <div class="block">
-      <div class="block-label">What the story is carrying</div>
-      <ul class="carry"><li>The paradox: the app says yes, the supplier says nothing</li><li>The chain that nobody told you about — three intermediary banks, conversion windows, AML holds, a Friday holiday in Shenzhen</li><li>The escalation: lost the day → lost the week → lost the order</li><li>The stakes that hit different in Q4 or on a launch SKU</li><li>The reframe: &quot;the wire isn&#x27;t lost. The visibility is.&quot;</li></ul>
-    </div>
-
-    <div class="grid2">
-      <div class="block">
-        <div class="block-label">Stats that anchor it</div>
-        <p class="prose mono">Three intermediaries · two days of conversion windows · one surprise AML hold · a Friday public holiday · five-day silence</p>
-      </div>
-      <div class="block">
-        <div class="block-label">What it should feel like</div>
-        <p class="prose">Quiet tension. The energy of refreshing a phone over and over and getting nothing back. Operator-to-operator. Real. Not preachy.</p>
-      </div>
-    </div>
-
-    <div class="grid2">
-      <div class="block open">
-        <div class="block-label">Open territory · your call</div>
-        <ul class="open-list"><li>Could be a single-take talking head with the anxiety on the face</li><li>Could be a split-screen of operator-side (calm app) vs supplier-side (empty factory, silent WhatsApp)</li><li>Could open on the calendar slipping rather than the wire — work backwards</li><li>Could be set in a SEA office with familiar visual cues (Bangkok / KL coworking, Friday afternoon light)</li><li>The &quot;Friday holiday in Shenzhen&quot; line is gold if she wants to lean into one specific story moment</li></ul>
-      </div>
-      <div class="block locked">
-        <div class="block-label">Locked · please keep</div>
-        <ul class="locked-list"><li>Vertical 9:16</li><li>~60 seconds</li><li>CTA at end: &quot;Search WorldFirst&quot;</li><li>We voice (not &quot;I&quot;)</li><li>No em-dashes in any captions or supers</li><li>WorldFirst proof point: direct CNY rails, same-day, with a tracking reference the supplier can match</li></ul>
-      </div>
-    </div>
-
-    <details class="vo-details">
-      <summary><span class="block-label">Story suggestion · a direction, rewrite it in your tone</span></summary>
-      <p class="vo">Is it possible to lose a container in five days without losing the money? Your bank app shows sent. Your supplier&#x27;s WhatsApp shows nothing. You haven&#x27;t lost the money. You&#x27;ve lost the day. Then the week. Then the order. Because your supplier won&#x27;t load raw materials until the CNY hits their account. So every hour the wire sits at an intermediary bank, your delivery date slips. Three intermediaries, two days of conversion windows, one AML hold above a threshold nobody told you about, plus a Friday public holiday in Shenzhen. That&#x27;s a five-day silence. On a Q4 order, five days is your container. On a launch SKU, five days is your competitor beating you to the shelf. The wire isn&#x27;t lost. The visibility is. WorldFirst removes the correspondent chain entirely. CNY straight to Chinese bank accounts, same-day, with a tracking reference your supplier can match. Search WorldFirst.</p>
-    </details>
-  </div>
-</section>
-<section id="s6" class="panel">
-  <div class="panel-num">06</div>
-  <div class="panel-body">
-    <h2>Three operators, same wire, three amounts</h2>
-    
-    <div class="meta-row">
-      <span class="tag">Math</span>
-      <span class="meta-id">P1-A14-1</span>
-      <span class="meta-len">~60s</span>
-    </div>
-
-    <div class="block">
-      <div class="block-label">Why we picked this story</div>
-      <p class="prose">Operators know &quot;FX is shady&quot; but cannot put a number on it. Most scripts trying to solve this fail because they hand-wave with percentages. This one nails three specific received amounts on identical wires and then compounds the gap into something an operator can touch (&quot;an employee, a container, the next product line&quot;). The compounding turn is the moment that hits — because most SEA operators run lean teams and &quot;an employee&quot; is a real ask. We picked PH2 over the four other Hormozi variants because it leads with the spread (numbers in the first sentence) rather than building up to it. Math-led hooks deserve math-led opens.</p>
-    </div>
-
-    <div class="block">
-      <div class="block-label">What this script is for</div>
-      <p class="prose">The proof piece. After the story script earns trust, this one delivers a number the audience can remember and screenshot. The strategic job: make the hidden margin visible enough that the audience starts checking their own. Every viewer who pulls out a calculator after watching is a win.</p>
-    </div>
-
-    <div class="block">
-      <div class="block-label">The truth underneath</div>
-      <p class="prose strong">Three operators send the same 50K to the same supplier on the same day. They get three different amounts received. The difference isn&#x27;t random and it isn&#x27;t small — it&#x27;s a hire over three years.</p>
-    </div>
-
-    <div class="block">
-      <div class="block-label">What the story is carrying</div>
-      <ul class="carry"><li>The setup that feels too tidy to be true (same supplier, same day, same wire)</li><li>The reveal (three different received amounts on identical wires)</li><li>The compounding (12 wires a year, 600K of sourcing volume)</li><li>The translation (7,200 dollar gap a year → 21,600 over three)</li><li>The &quot;that&#x27;s an employee / container / product line&quot; moment — abstract becomes tangible</li><li>The mechanism in one line: not a fee, the rate</li></ul>
-    </div>
-
-    <div class="grid2">
-      <div class="block">
-        <div class="block-label">Stats that anchor it</div>
-        <p class="prose mono">49,250 / 49,700 / 49,850 · 600 dollar spread · 12 wires · 600K volume · 9,000 vs 1,800 annual loss · 7,200 gap · 21,600 over 3 years · 1-2% bank margin · 0.3% specialist margin</p>
-      </div>
-      <div class="block">
-        <div class="block-label">What it should feel like</div>
-        <p class="prose">Confident. Each number lands. The energy of someone showing receipts, not selling. Hormozi-adjacent without the shouting.</p>
-      </div>
-    </div>
-
-    <div class="grid2">
-      <div class="block open">
-        <div class="block-label">Open territory · your call</div>
-        <ul class="open-list"><li>Could be pure talking head if the delivery is strong enough to carry the math</li><li>Could be a calculator-on-screen treatment where the math is the visual</li><li>Could be three split-screen receipts that animate the spread</li><li>The &quot;that&#x27;s an employee / container / product line&quot; line opens up a great cutaway sequence — find the strongest image of each and let it breathe</li><li>Worth considering: end on a comparison bar that lives on screen long enough for the viewer to screenshot it</li></ul>
-      </div>
-      <div class="block locked">
-        <div class="block-label">Locked · please keep</div>
-        <ul class="locked-list"><li>Vertical 9:16</li><li>~60 seconds</li><li>CTA at end: &quot;Search WorldFirst&quot;</li><li>We voice</li><li>No em-dashes</li><li>WorldFirst proof point: 0.3% margin on the same wires, same-day to Chinese bank accounts</li></ul>
-      </div>
-    </div>
-
-    <details class="vo-details">
-      <summary><span class="block-label">Story suggestion · a direction, rewrite it in your tone</span></summary>
-      <p class="vo">Here&#x27;s what every business owner needs to know about how wire rate margin compounds across a year. Three business owners sent 50K to the same Chinese supplier on the same day. Supplier received three different amounts. 49,250. 49,700. 49,850. A 600 dollar spread on identical wires. Now compound it. 12 wires a year at 50K each. 600 thousand dollars in sourcing volume. The business owner who used the bank lost around 9,000 dollars. The business owner who used the specialist lost around 1,800. That&#x27;s a 7,200 dollar gap in one year. On the same business. Run it across three years. 21,600 dollars. That&#x27;s an employee. That&#x27;s a container of inventory. That&#x27;s the next product line. And it&#x27;s not a fee. It&#x27;s the exchange rate margin. Banks bake 1 to 2% into the rate so you never see the line item. WorldFirst sits closer to 0.3% on the same wires. Same day to Chinese bank accounts. Search WorldFirst.</p>
-    </details>
-  </div>
-</section>
-<section id="s7" class="panel">
-  <div class="panel-num">07</div>
-  <div class="panel-body">
-    <h2>Find the hidden FX margin in 30 seconds</h2>
-    
-    <div class="meta-row">
-      <span class="tag">Demo</span>
-      <span class="meta-id">P2-A8-1</span>
-      <span class="meta-len">~30s (matches the promise in the hook)</span>
-    </div>
-
-    <div class="block">
-      <div class="block-label">Why we picked this story</div>
-      <p class="prose">The audience hears &quot;hidden fees&quot; all the time and tunes out. This script breaks the tune-out by making it a do-it-now exercise. They check their own bank receipt and find their own number. Self-discovery beats us telling them every single time. PH2 was the only Hormozi variant that framed it as a 30-second challenge with explicit step counts — that structure makes the script unusually easy to follow on a phone, even with sound off.</p>
-    </div>
-
-    <div class="block">
-      <div class="block-label">What this script is for</div>
-      <p class="prose">The conversion piece. After Story (trust) and Math (proof), this one makes the cost personal. Once the audience has seen their own hidden fee number, the WorldFirst positioning at the end lands without effort — it answers a question they&#x27;re already asking themselves. Strategic outcome: a viewer who screenshots their own bank receipt and shows it to their accountant or co-founder. That share is the product of this script.</p>
-    </div>
-
-    <div class="block">
-      <div class="block-label">The truth underneath</div>
-      <p class="prose strong">A 30-second exercise anyone with a phone can do, that exposes a fee the bank has every reason not to show on a line item.</p>
-    </div>
-
-    <div class="block">
-      <div class="block-label">What the story is carrying</div>
-      <ul class="carry"><li>The challenge framing (&quot;30 seconds, watch&quot;)</li><li>Step 1: the wire confirmation — &quot;applied rate&quot; is the field that matters</li><li>Step 2: Google the mid-market rate for that currency pair</li><li>Step 3: the gap IS the margin</li><li>Step 4: multiply the gap by the wire amount — that&#x27;s the hidden fee in dollars</li><li>The line that bites: &quot;No line item. No receipt. Just hidden inside the rate.&quot;</li></ul>
-    </div>
-
-    <div class="grid2">
-      <div class="block">
-        <div class="block-label">Stats that anchor it</div>
-        <p class="prose mono">30 seconds total · 5s / 10s / a few seconds to compare / 10s to multiply · 2% gap example · 50K wire example · 1,000 dollars per wire</p>
-      </div>
-      <div class="block">
-        <div class="block-label">What it should feel like</div>
-        <p class="prose">Tutorial-friendly. Slightly conspiratorial — like sharing a trick a finance friend told you. Not &quot;watch me solve a puzzle&quot;; more &quot;you can do this right now, here&#x27;s how.&quot;</p>
-      </div>
-    </div>
-
-    <div class="grid2">
-      <div class="block open">
-        <div class="block-label">Open territory · your call</div>
-        <ul class="open-list"><li>Could be screen-recording-led with talent narrating over their own phone</li><li>Could be talent on camera with a stopwatch ticking in the corner, doing the math on a notepad</li><li>Could use a real (anonymized) wire confirmation from a SEA bank for credibility</li><li>Could end on a screenshot moment that begs to be shared — make sure the final reveal frame is screenshot-worthy</li><li>Stopwatch is optional but plays well with the &quot;30 seconds&quot; promise — director&#x27;s call</li></ul>
-      </div>
-      <div class="block locked">
-        <div class="block-label">Locked · please keep</div>
-        <ul class="locked-list"><li>Vertical 9:16</li><li>~30 seconds (matches the promise in the hook)</li><li>CTA at end: &quot;Search WorldFirst&quot;</li><li>We voice</li><li>No em-dashes</li><li>No country-specific framing in the body (USD is the wire currency, destination is whatever local currency the viewer wired to)</li><li>WorldFirst proof point: near Google mid-market rate = hidden fee disappears</li></ul>
-      </div>
-    </div>
-
-    <details class="vo-details">
-      <summary><span class="block-label">Story suggestion · a direction, rewrite it in your tone</span></summary>
-      <p class="vo">Can a business owner find a hidden foreign exchange fee in 30 seconds? Watch. Watch. Step one. Pull up your last wire confirmation. Five seconds. Find the field that says applied rate or exchange rate used. Got it. Step two. Open a new tab. Google USD to the local currency you wired to. Look at the rate. That&#x27;s the mid-market rate. Five seconds. Step three. Compare. Your bank&#x27;s rate versus Google&#x27;s rate. The gap is the margin. Twenty seconds in, you&#x27;ve found it. Step four. Multiply the gap by the wire amount. Ten seconds. That&#x27;s the fee. No line item. No receipt. Just hidden inside the rate. Most business owners wire 50K to 100K per order. A 2 percent gap on a 50K wire is 1,000 dollars. Per wire. WorldFirst gives you a rate near Google&#x27;s mid-market. The hidden fee disappears. Search WorldFirst.</p>
-    </details>
-  </div>
-</section>
-  </main>
 </div>
+<div id="content" hidden></div>
+<script type="application/json" id="payload">{"v": 1, "salt": "CIb1P5saS1q02ohmnFuDlw==", "iv": "ucETuts1vkmJ+xQ5", "iterations": 100000, "ciphertext": "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"}</script>
+<script>
+const STORAGE_KEY = 'hen_hui_brief_pw';
+function b64ToBytes(b64) {
+  const bin = atob(b64);
+  const bytes = new Uint8Array(bin.length);
+  for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+  return bytes;
+}
+async function deriveKey(password, salt, iterations) {
+  const enc = new TextEncoder();
+  const baseKey = await crypto.subtle.importKey('raw', enc.encode(password), 'PBKDF2', false, ['deriveKey']);
+  return crypto.subtle.deriveKey(
+    { name: 'PBKDF2', salt, iterations, hash: 'SHA-256' },
+    baseKey,
+    { name: 'AES-GCM', length: 256 },
+    false, ['decrypt']
+  );
+}
+async function decryptPayload(password) {
+  const blob = JSON.parse(document.getElementById('payload').textContent);
+  const salt = b64ToBytes(blob.salt);
+  const iv = b64ToBytes(blob.iv);
+  const ct = b64ToBytes(blob.ciphertext);
+  const key = await deriveKey(password, salt, blob.iterations);
+  const plain = await crypto.subtle.decrypt({ name: 'AES-GCM', iv }, key, ct);
+  return new TextDecoder().decode(plain);
+}
+async function gateSubmit(e) {
+  e.preventDefault();
+  const inp = document.getElementById('gate-input');
+  const err = document.getElementById('gate-err');
+  err.textContent = '';
+  try {
+    const innerHtml = await decryptPayload(inp.value);
+    document.getElementById('content').innerHTML = innerHtml;
+    document.getElementById('content').hidden = false;
+    document.getElementById('gate').style.display = 'none';
+    document.body.classList.remove('locked');
+    try { localStorage.setItem(STORAGE_KEY, inp.value); } catch (_) {}
+  } catch (ex) {
+    err.textContent = 'wrong password';
+    inp.value = '';
+    inp.focus();
+  }
+  return false;
+}
+(async () => {
+  try {
+    const cached = localStorage.getItem(STORAGE_KEY);
+    if (cached) {
+      const innerHtml = await decryptPayload(cached);
+      document.getElementById('content').innerHTML = innerHtml;
+      document.getElementById('content').hidden = false;
+      document.getElementById('gate').style.display = 'none';
+      document.body.classList.remove('locked');
+    }
+  } catch (_) {
+    try { localStorage.removeItem(STORAGE_KEY); } catch (_) {}
+  }
+})();
+</script>
 </body>
 </html>

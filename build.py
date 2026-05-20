@@ -1,11 +1,29 @@
 """Producer brief — context + creative territory for the top 3 SEA picks.
 
 Reads finalized.json + slides.json from sea-voice-iterate. /report-style HTML.
-A brief, not a checklist: gives the creator the truth, the audience, the constraints,
-and open territory. The VO copy is a reference, not a script-as-law.
+Password-gated (wf) for internal team viewing.
 """
-import json, html, os
+import json, html, os, base64
+from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
+from cryptography.hazmat.primitives.ciphers.aead import AESGCM
+from cryptography.hazmat.primitives import hashes
 esc = html.escape
+
+PASSWORD = 'wf'
+PBKDF2_ITER = 100_000
+STORAGE_KEY = 'hen_hui_brief_pw'
+
+def encrypt_payload(plaintext: str, password: str = PASSWORD) -> dict:
+    salt = os.urandom(16); iv = os.urandom(12)
+    key = PBKDF2HMAC(algorithm=hashes.SHA256(), length=32, salt=salt, iterations=PBKDF2_ITER).derive(password.encode('utf-8'))
+    ct = AESGCM(key).encrypt(iv, plaintext.encode('utf-8'), None)
+    return {
+        'v': 1,
+        'salt': base64.b64encode(salt).decode('ascii'),
+        'iv': base64.b64encode(iv).decode('ascii'),
+        'iterations': PBKDF2_ITER,
+        'ciphertext': base64.b64encode(ct).decode('ascii'),
+    }
 
 SRC = '/Users/steven/Documents/Claude/sea-voice-iterate'
 fz = json.load(open(f'{SRC}/finalized.json'))
@@ -313,16 +331,7 @@ h2 { font-size: 24px; line-height: 1.25; letter-spacing: -0.012em; font-weight: 
 }
 '''
 
-HTML_PAGE = f'''<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="robots" content="noindex,nofollow">
-<title>SEA Batch 1 - Three to film</title>
-<style>{CSS}</style>
-</head>
-<body>
+INNER_HTML = f'''
 <div class="layout">
   <nav class="sidebar">
     <div class="sb-kicker">Creator brief · for Hen Hui</div>
@@ -340,12 +349,118 @@ HTML_PAGE = f'''<!DOCTYPE html>
     </div>
     {''.join(CONTEXT_PANELS)}
     {SCRIPT_PANELS}
+    <footer class="footer">
+      <a href="#" onclick="localStorage.removeItem('{STORAGE_KEY}');location.reload();return false;">lock device</a>
+    </footer>
   </main>
 </div>
+'''
+
+payload_json = json.dumps(encrypt_payload(INNER_HTML))
+
+GATE_CSS = '''
+body.locked { overflow: hidden; }
+#gate { position: fixed; inset: 0; background: var(--bg, #fff); display: flex; align-items: center; justify-content: center; z-index: 9999; }
+#gate-card { width: min(360px, 92vw); padding: 40px 32px; border: 1px solid #d8d8d8; border-radius: 10px; background: #fff; text-align: center; }
+#gate-card h2 { font-size: 18px; font-weight: 600; margin: 0 0 22px; color: #0a0a0a; letter-spacing: -0.01em; }
+#gate-form { display: flex; flex-direction: column; gap: 10px; }
+#gate-input { padding: 12px 14px; font-size: 14px; border: 1px solid #d8d8d8; border-radius: 6px; outline: none; font-family: inherit; }
+#gate-input:focus { border-color: #0a0a0a; }
+#gate-btn { padding: 12px 14px; font-size: 13px; font-weight: 600; letter-spacing: 0.02em; background: #0a0a0a; color: #fff; border: 0; border-radius: 6px; cursor: pointer; }
+#gate-btn:hover { background: #2a2a2a; }
+#gate-err { font-size: 12px; color: #b03060; margin-top: 8px; min-height: 16px; }
+.footer { margin-top: 80px; padding-top: 24px; border-top: 1px solid #ececec; font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 11px; color: #6a6a6a; }
+.footer a { color: #6a6a6a; text-decoration: none; }
+.footer a:hover { color: #0a0a0a; text-decoration: underline; }
+'''
+
+HTML_PAGE = f'''<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Three to film - for Hen Hui</title>
+<style>{CSS}{GATE_CSS}</style>
+</head>
+<body class="locked">
+<div id="gate">
+  <div id="gate-card">
+    <h2>Three to film · for Hen Hui</h2>
+    <form id="gate-form" onsubmit="return gateSubmit(event)">
+      <input id="gate-input" type="password" placeholder="password" autocomplete="off" autofocus>
+      <button id="gate-btn" type="submit">Enter</button>
+    </form>
+    <div id="gate-err"></div>
+  </div>
+</div>
+<div id="content" hidden></div>
+<script type="application/json" id="payload">{payload_json}</script>
+<script>
+const STORAGE_KEY = '{STORAGE_KEY}';
+function b64ToBytes(b64) {{
+  const bin = atob(b64);
+  const bytes = new Uint8Array(bin.length);
+  for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+  return bytes;
+}}
+async function deriveKey(password, salt, iterations) {{
+  const enc = new TextEncoder();
+  const baseKey = await crypto.subtle.importKey('raw', enc.encode(password), 'PBKDF2', false, ['deriveKey']);
+  return crypto.subtle.deriveKey(
+    {{ name: 'PBKDF2', salt, iterations, hash: 'SHA-256' }},
+    baseKey,
+    {{ name: 'AES-GCM', length: 256 }},
+    false, ['decrypt']
+  );
+}}
+async function decryptPayload(password) {{
+  const blob = JSON.parse(document.getElementById('payload').textContent);
+  const salt = b64ToBytes(blob.salt);
+  const iv = b64ToBytes(blob.iv);
+  const ct = b64ToBytes(blob.ciphertext);
+  const key = await deriveKey(password, salt, blob.iterations);
+  const plain = await crypto.subtle.decrypt({{ name: 'AES-GCM', iv }}, key, ct);
+  return new TextDecoder().decode(plain);
+}}
+async function gateSubmit(e) {{
+  e.preventDefault();
+  const inp = document.getElementById('gate-input');
+  const err = document.getElementById('gate-err');
+  err.textContent = '';
+  try {{
+    const innerHtml = await decryptPayload(inp.value);
+    document.getElementById('content').innerHTML = innerHtml;
+    document.getElementById('content').hidden = false;
+    document.getElementById('gate').style.display = 'none';
+    document.body.classList.remove('locked');
+    try {{ localStorage.setItem(STORAGE_KEY, inp.value); }} catch (_) {{}}
+  }} catch (ex) {{
+    err.textContent = 'wrong password';
+    inp.value = '';
+    inp.focus();
+  }}
+  return false;
+}}
+(async () => {{
+  try {{
+    const cached = localStorage.getItem(STORAGE_KEY);
+    if (cached) {{
+      const innerHtml = await decryptPayload(cached);
+      document.getElementById('content').innerHTML = innerHtml;
+      document.getElementById('content').hidden = false;
+      document.getElementById('gate').style.display = 'none';
+      document.body.classList.remove('locked');
+    }}
+  }} catch (_) {{
+    try {{ localStorage.removeItem(STORAGE_KEY); }} catch (_) {{}}
+  }}
+}})();
+</script>
 </body>
 </html>
 '''
 
 with open(os.path.join(os.path.dirname(__file__), 'index.html'), 'w') as f:
     f.write(HTML_PAGE)
-print('Built: index.html')
+print('Built: index.html (gated with wf)')
